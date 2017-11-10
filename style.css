@@ -1,0 +1,102 @@
+/* Table of contents
+------------------------------
+- General Content
+- Navigation
+- Section
+- Images & Media
+------------------------------ */
+
+/* General Content
+------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans');
+
+*{box-sizing: border-box;}
+
+html{
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;}
+
+img {
+    max-width: 100%;
+    height: auto;}
+
+p{
+    font-family: 'Work Sans', sans-serif;}
+
+
+/* Navigation
+------------------------------ */
+
+#container {
+	margin: 0 10%;
+}
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 50px 0;
+	background-color: #fff;
+    border-bottom: 0.5px solid #7f7f7f;
+    border-top: 0.5px solid #7f7f7f;
+}
+
+nav ul {
+	padding: 0;
+    margin: 0 20%;
+	list-style: none;
+	position: relative;
+	}
+
+nav ul li {
+	display:inline-block;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;
+	color:#111;
+	font-size:20px;
+	line-height: 40px;
+	text-decoration:none;
+}
+
+nav a:hover {
+	color: #42bdcd;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+    background-color: #fff;
+    border-bottom: 3px solid #111;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+/* Section
+------------------------------ */
+
+section {
+    margin: 0 10%;}
