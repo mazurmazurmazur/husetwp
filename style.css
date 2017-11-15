@@ -1,0 +1,213 @@
+/* Table of contents
+------------------------------
+- General Content
+- Images & Media
+- Typography
+- Navigation
+- Section
+- Footer
+------------------------------ */
+
+/* General Content
+------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans');
+
+*{box-sizing: border-box;}
+
+html{
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;}
+
+/* Images & Media
+------------------------------ */
+
+img {
+    max-width: 100%;
+    height: auto;}
+
+.logo{
+    align-self: center;
+    margin-top: 5%;}
+
+article img{
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image{
+    position: relative;}
+
+.image span{
+    position: absolute;
+    bottom: -2px;
+    left: 130px;
+    color: #fff;
+    background-color: #111;
+    padding: 0.4em 1em;
+    font-size: 0.8em;
+    text-align: center;
+    width: 80px;}
+
+.image span:hover{
+    background-color: #42bdcd;
+    color: #fff;
+    cursor: pointer;}
+
+@media (min-width: 768px){
+
+article img{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image span{
+    position: absolute;
+    bottom: -2px;
+    left: 110px;
+    }}
+
+#container, .title, footer, section{
+       margin: 0 6%;}
+
+@media (min-width: 768px){
+
+#container, .title, footer, section{
+       margin: 0 10%;}
+}
+
+/* Typography
+------------------------------ */
+
+h1 {font-size: 1.2em;}
+
+h2{
+    font-size: 1em;}
+
+h3{
+    color: dimgray;
+    font-size: 0.8em;}
+
+.title span{
+    color: #42bdcd;}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+	text-align: center;
+}
+
+.read-more{
+    border-bottom: 1px solid #111;
+    color: #111;
+    text-decoration: none;}
+
+/* Navigation
+------------------------------ */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav, .bottom-nav {
+	margin: 50px 0;
+	background-color: #fff;
+    border-bottom: 0.5px solid #7f7f7f;
+    border-top: 0.5px solid #7f7f7f;
+}
+
+.bottom-nav {
+    margin: 2% 0 0 0;}
+
+nav ul {
+	padding: 0;
+    margin: 0 2%;
+	list-style: none;
+	position: relative;
+    left: 18%;
+	}
+
+nav ul li {
+	display:inline-block;
+	}
+
+nav a, .bottom-nav a{
+	display:block;
+	padding:0 10px;
+	color:#111;
+	font-size: 1em;
+	line-height: 40px;
+	text-decoration:none;
+}
+
+.bottom-nav a{
+    display: inline-block;}
+
+nav a:hover {
+	color: #42bdcd;
+}
+
+.bottom-nav a:hover {
+	color: #42bdcd;
+}
+
+@media (min-width: 768px){
+
+nav ul {
+    margin: 0 20%;
+    }
+
+nav a {
+    font-size: 1.2em;}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+    background-color: #fff;
+    border-bottom: 3px solid #111;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+nav ul ul li a {
+    font-size: 1em;}
+}
+
+/* Section
+------------------------------ */
+
+@media (min-width: 768px){
+
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;}
+
+article{
+    padding: 1em;}
+}
+
+/* Footer
+------------------------------ */
+
+footer{
+    text-align: center;}
+
