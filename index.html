@@ -7,72 +7,38 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="logo"><img src="logo-mobile.png" alt="huset logo"></div>
 <div id="container">
+    <div class="logo"><img src="logo-mobile.png" alt="huset logo"></div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Movie</a>
-            <!-- First Tier Drop Down -->
-            <ul>
-                <li><a href="#">Clasic</a></li>
-                <li><a href="#">Cult</a></li>
-                <li><a href="#">Documentary</a></li>
-                <li><a href="#">Drama</a></li>
-                <li><a href="#">Horror</a></li>
-                <li><a href="#">Independent</a></li>
-                <li><a href="#">Musical</a></li>
-                <li><a href="#">Nature</a></li>
-            </ul>
-            </li>
-            <li><a href="#">Music</a>
-            <!-- First Tier Drop Down -->
-            <ul>
-                <li><a href="#">Alternative</a></li>
-                <li><a href="#">Jazz</a></li>
-                <li><a href="#">Metal</a></li>
-                <li><a href="#">Folk</a></li>
-                <li><a href="#">Pop</a></li>
-                <li><a href="#">Rock</a></li>
-                <li><a href="#">World</a></li>
-            </ul>
-            </li>
-            <li><a href="#">Performance</a>
-            <!-- First Tier Drop Down -->
-            <ul>
-                <li><a href="#">Dance</a></li>
-                <li><a href="#">Performance Art</a></li>
-                <li><a href="#">Theater</a></li>
-            </ul>
-            </li>
-            <li><a href="#">Spoken</a>
-            <!-- First Tier Drop Down -->
-            <ul>
-                <li><a href="#">Poetry Slam</a></li>
-                <li><a href="#">Stand Up</a></li>
-                <li><a href="#">Storytelling</a></li>
-            </ul>
-            </li>
-            <li><a href="#">More</a>
-            <!-- First Tier Drop Down -->
-            <ul>
-                <li><a href="#">Food</a></li>
-            </ul>
-            </li>
+            <li><a href="#">Jazz</a></li>
+            <li><a href="#">Folk</a></li>
+            <li><a href="#">Alternative</a></li>
         </ul>
     </nav>
 </div>
+    <h1 class="title">Hello <span>Susan</span>,<br> We found events that might be interesting for you:</h1>
     <section id="list"></section>
 
     <template id="bookTemplate">
         <article class="book">
             <h1></h1>
             <div class="excerpt"></div>
-            <img src="" alt="">
+            <div class="image"><img src="" alt=""><span>category</span></div>
             <p class ="price">$<span></span></p>
-            <p><a class="read-more"href="book.html?id=">Read more</a></p>
+            <p><a class="read-more" href="book.html?id=">read more</a></p>
         </article>
     </template>
+    <footer>
+        <div class="bottom-nav">
+            <a href="#">contact</a>
+            <a href="#">about</a>
+            <a href="#">volunteer</a>
+            <a href="#">venues</a>
+            <a href="#">faq</a>
+        </div>
+        <h3 class="ft">&#169; 2017 by FUG Team</h3>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
