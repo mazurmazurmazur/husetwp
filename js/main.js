@@ -20,11 +20,17 @@ function showBooks(data){
         let title = clone.querySelector("h1");
         let excerpt = clone.querySelector(".excerpt");
         let price = clone.querySelector(".price span");
+        let date = clone.querySelector(".date span");
+        let time = clone.querySelector(".time span");
         let img = clone.querySelector("img");
         let link = clone.querySelector("a.read-more");
 
 
         title.textContent= theBook.title.rendered;
+        price.textContent= theBook.acf.price;
+        date.textContent= theBook.acf.date;
+        time.textContent= theBook.acf.time;
+
 
         img.setAttribute("src", theBook._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
 
