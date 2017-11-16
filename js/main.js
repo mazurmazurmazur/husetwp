@@ -1,5 +1,5 @@
 function getAllBooks(){
-    fetch("http://huset-kbh.smartbrand.dk/wp-json/wp/v2/events123?_embed&per_page=11")
+    fetch("http://mazur.sharemedia.dk/wp-json/wp/v2/events1?_embed&per_page=11")
     .then(res=>res.json())
     .then(showBooks)
 }
@@ -18,8 +18,6 @@ function showSingleBook(json){
     img.setAttribute("src", json._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
 
 }
-
-
 
 
 function showBooks(data){
