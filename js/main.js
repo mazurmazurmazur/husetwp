@@ -4,6 +4,21 @@ function getAllBooks(){
     .then(showBooks)
 }
 
+function getSingleBookById(myId){
+    fetch("https://t7.kea-alt-del.dk/wp-json/wp/v2/books/"+myId+"?_embed")
+    .then(res=>res.json())
+    .then(showSingleBook);
+}
+
+function showSingleBook(json){
+    console.log(json);
+    let img = document.querySelector("img");
+    let h1 = document.querySelector("#single h1").textContent= "json.title.rendered;"
+    document.querySelector("#single .price span").textContent=json.acf.price;
+    img.setAttribute("src", json._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+
+}
+
 
 
 
@@ -28,6 +43,8 @@ function showBooks(data){
 
         title.textContent= theBook.title.rendered;
         img.setAttribute("src", theBook._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+
+        link.setAttribute("href", "book.html?id="+theBook.id);
 
         price.textContent= theBook.acf.price;
         date.textContent= theBook.acf.date;
