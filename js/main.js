@@ -42,7 +42,7 @@ function showBooks(data){
         title.textContent= theBook.title.rendered;
         img.setAttribute("src", theBook._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
 
-        link.setAttribute("href", "book.html?id="+theBook.id);
+        link.setAttribute("href", "event.html?id="+theBook.id);
 
         price.textContent= theBook.acf.price;
         date.textContent= theBook.acf.date;
