@@ -1,5 +1,5 @@
 function getAllBooks(){
-    fetch("http://huset-kbh.smartbrand.dk/wp-json/wp/v2/events123?_embed")
+    fetch("http://huset-kbh.smartbrand.dk/wp-json/wp/v2/events123?_embed&per_page=11")
     .then(res=>res.json())
     .then(showBooks)
 }
@@ -20,13 +20,18 @@ function showBooks(data){
         let title = clone.querySelector("h1");
         let excerpt = clone.querySelector(".excerpt");
         let price = clone.querySelector(".price span");
-        let img = clone.querySelector("img");
+        let date = clone.querySelector(".date span");
+        let time = clone.querySelector(".time span");
+        let img = clone.querySelector(".image img");
         let link = clone.querySelector("a.read-more");
 
 
         title.textContent= theBook.title.rendered;
-
         img.setAttribute("src", theBook._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
+
+        price.textContent= theBook.acf.price;
+        date.textContent= theBook.acf.date;
+        time.textContent= theBook.acf.time;
 
         list.appendChild(clone);
 
