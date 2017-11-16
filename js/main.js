@@ -39,10 +39,15 @@ function showBooks(data){
         let time = clone.querySelector(".time span");
         let img = clone.querySelector(".image img");
         let link = clone.querySelector("a.read-more");
+        let category = clone.querySelector(".image span");
 
+
+        console.log(theBook._embedded["wp:term"]);
+
+
+        category.textContent = theBook._embedded["wp:term"][0][0].name;
         title.textContent= theBook.title.rendered;
         img.setAttribute("src", theBook._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-
         link.setAttribute("href", "event.html?id="+theBook.id);
 
         price.textContent= theBook.acf.price;

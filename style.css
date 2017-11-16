@@ -22,8 +22,12 @@ html{
 /* Images & Media
 ------------------------------ */
 
-.single{
-    position:
+#singleImage, #singleTitle{
+    display: table;
+    margin: 0 auto;
+}
+#singleTitle{
+    padding: 25px;
 }
 
 img {
