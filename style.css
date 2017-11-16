@@ -22,6 +22,10 @@ html{
 /* Images & Media
 ------------------------------ */
 
+.single{
+    position:
+}
+
 img {
     max-width: 100%;
     height: auto;}
@@ -102,6 +106,10 @@ p {
     border-bottom: 1px solid #111;
     color: #111;
     text-decoration: none;}
+
+.price, .price span{
+    font-weight: bold;
+}
 
 /* Navigation
 ------------------------------ */

@@ -5,18 +5,20 @@ function getAllBooks(){
 }
 
 function getSingleBookById(myId){
-    fetch("https://t7.kea-alt-del.dk/wp-json/wp/v2/books/"+myId+"?_embed")
+    fetch("http://mazur.sharemedia.dk/wp-json/wp/v2/events1/"+myId+"?_embed")
     .then(res=>res.json())
     .then(showSingleBook);
 }
 
 function showSingleBook(json){
     console.log(json);
-    let img = document.querySelector("img");
-    let h1 = document.querySelector("#single h1").textContent= "json.title.rendered;"
+    let img = document.querySelector(".image img");
+    let h1 = document.querySelector("#single h1").textContent= json.title.rendered;
+    let excerpt = document.querySelector(".excerpt").innerHTML = json.content.rendered;
     document.querySelector("#single .price span").textContent=json.acf.price;
+    document.querySelector("#single .date span").textContent=json.acf.date;
+    document.querySelector("#single .time span").textContent=json.acf.time;
     img.setAttribute("src", json._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
-
 }
 
 
@@ -37,7 +39,6 @@ function showBooks(data){
         let time = clone.querySelector(".time span");
         let img = clone.querySelector(".image img");
         let link = clone.querySelector("a.read-more");
-
 
         title.textContent= theBook.title.rendered;
         img.setAttribute("src", theBook._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
