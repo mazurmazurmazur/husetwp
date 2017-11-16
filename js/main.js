@@ -1,10 +1,8 @@
 function getAllBooks(){
-    fetch("http://huset-kbh.smartbrand.dk/wp-json/wp/v2/events123?_embed&per_page=11")
+    fetch("http://mazur.sharemedia.dk/wp-json/wp/v2/events1?_embed&per_page=11")
     .then(res=>res.json())
     .then(showBooks)
 }
-
-
 
 
 function showBooks(data){
